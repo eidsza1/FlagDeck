@@ -1,0 +1,37 @@
+{
+  "name": "flagdeck",
+  "version": "1.0.0",
+  "description": "An MCP server for managing feature flags — toggles, percentage rollouts, and targeting rules with deterministic evaluation.",
+  "type": "module",
+  "bin": {
+    "flagdeck": "dist/index.js"
+  },
+  "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc --watch",
+    "start": "node dist/index.js",
+    "dev": "node --experimental-strip-types --watch src/index.ts",
+    "inspect": "npm run build && npx @modelcontextprotocol/inspector node dist/index.js --stdio",
+    "demo:a2ui": "npm run build && node scripts/a2ui-loop-demo.mjs",
+    "test": "node --experimental-strip-types --test test/*.test.ts"
+  },
+  "keywords": [
+    "mcp",
+    "feature-flags",
+    "feature-toggles",
+    "model-context-protocol"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "typescript": "^5.7.2"
+  }
+}

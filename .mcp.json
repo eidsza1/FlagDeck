@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "flagdeck": {
+      "command": "node",
+      "args": ["./dist/index.js", "--stdio"],
+      "env": {
+        "FLAGDECK_STORE": "./.flagdeck/flags.json"
+      }
+    }
+  }
+}

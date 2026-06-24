@@ -1,0 +1,12 @@
+{
+  "servers": {
+    "flagdeck": {
+      "type": "stdio",
+      "command": "node",
+      "args": ["${workspaceFolder}/dist/index.js", "--stdio"],
+      "env": {
+        "FLAGDECK_STORE": "${workspaceFolder}/.flagdeck/flags.json"
+      }
+    }
+  }
+}
